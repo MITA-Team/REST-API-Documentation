@@ -27,7 +27,7 @@
   "status": 200,
   "data" : [
     {
-      "id" : "Integer",    ,
+      "id" : "Integer",
       "soal" : "String",
       "jawaban" : "String",
       "createdAt": "date",
