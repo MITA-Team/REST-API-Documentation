@@ -102,8 +102,8 @@
 #### Response Failed
 ```json
 {
-  "status" : 500,
-  "message" : "Terjadi kesalahan server!"
+  "status" : 404,
+  "message" : "Data tidak ditemukan!"
 }
 ```
 
@@ -136,7 +136,7 @@ Content-Type: application/json
 #### Response Failed
 ```json
 {
-  "status" : 200,
-  "message" : "Data berhasil dihapus!"
+  "status" : 500,
+  "message" : "Terjadi kesalahan server!"
 }
 ```
