@@ -1,6 +1,6 @@
 # REST-API-Documentation
 
-## User
+## --- User ---
 
 ### GET
 
@@ -8,21 +8,24 @@
 
 ### POST
 
-## Soal Test
+## --- Soal Test ---
 
 ### GET
 
 ### POST
 
-## Hasil Test
+## --- Hasil Test ---
 
 ### GET
 
 #### Request
-``` GET http://<IP>/test/result ```
+``` GET http://<IP>/api/result/:userId/test/:testId ```
 
-#### Response
-```
+#### Headers
+- Authorization: Token
+
+#### Response Success
+```json
 {
   "status": 200,
   "data" : [
@@ -30,18 +33,110 @@
       "id" : "Integer",
       "soal" : "String",
       "jawaban" : "String",
-      "createdAt": "date",
-      "updatedAt": "date"
+      "createdAt" : "date",
+      "updatedAt" : "date"
+    }
+  ],
+  "recommendation" : "String"
+}
+```
+
+#### Response Failed
+
+```json
+{
+  "status" : 404,
+  "message" : "Data tidak ditemukan!"
+}
+```
+
+### DELETE
+
+#### Request
+``` DELETE http://<IP>/api/result/:userId/test/:testId```
+
+#### Headers
+- Authorization: Token
+
+#### Response Success
+```json
+{
+  "status" : 200,
+  "message" : "Data berhasil dihapus!"
+}
+```
+
+#### Response Failed
+```json
+{
+  "status" : 500,
+  "message" : "Terjadi kesalahan server!"
+}
+```
+
+## --- Favorite ---
+
+### GET
+
+#### Request
+``` GET http://<IP>/api/user/:userId/lists ```
+
+#### Headers
+- Authorization: Token
+
+#### Response Success
+```json
+{
+  "status" : 200,
+  "data" : [
+    {
+      "id" : "Integer",
+      "title" : "String",
+      "body" : "String",
+      "image": "String"
     }
   ]
 }
+```
 
+#### Response Failed
+```json
+{
+  "status" : 500,
+  "message" : "Terjadi kesalahan server!"
+}
 ```
 
 ### POST
 
-## Favorite
+#### Headers
+- Authorization: Token
 
-### GET
+#### Request
+```json 
+POST http://<IP>/api/user/:userId/lists 
+Content-Type: application/json
 
-### POST
+{
+  "id" : "Integer",
+  "title" : "String",
+  "body" : "String",
+  "image": "String"
+}
+```
+
+#### Response Success
+```json
+{
+  "status" : 200,
+  "message" : "Data berhasil ditambahkan!"
+}
+```
+
+#### Response Failed
+```json
+{
+  "status" : 200,
+  "message" : "Data berhasil dihapus!"
+}
+```
