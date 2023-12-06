@@ -46,7 +46,7 @@
 {
 "status" : 200,
 "message" : "Data pengguna berhasil ditemukan",
-“data” : {
+"data" : {
 "email" : "fidelaCarissa@gmail.com", 
 "username" : "fidela carissa"
 }
@@ -74,12 +74,12 @@
 "data" : {
 "id" : 1,
 "soal" : "Anak melamun atau pandangan kosong?",
-“kategori” : “speech”,
+"kategori" : "speech",
 "jawaban" : [
-Always, 
-Usually, 
-Sometimes,
-Rarely & Never ]
+"Always", 
+"Usually", 
+"Sometimes",
+"Rarely & Never" ]
 }
 }
 ```
@@ -464,7 +464,7 @@ Rarely & Never ]
 ```json
 {
 "status" : 200,
-"message" : "Data anak dengan id '${childId} berhasil diperbarui”
+"message" : "Data anak dengan id ${childId} berhasil diperbarui"
 }
 ```
 
@@ -499,7 +499,7 @@ Rarely & Never ]
 ```json
 {
 "status" : 404,
-"message" : "Data anak tidak ditemukan "
+"message" : "Data anak tidak ditemukan"
 }
 ```
 
@@ -515,7 +515,7 @@ Rarely & Never ]
 ```json
 {
 "status" : 200,
-"message" : "Data pengguna berhasil dihapus'
+"message" : "Data pengguna berhasil dihapus"
 }
 ```
 
