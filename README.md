@@ -14,12 +14,12 @@
 {
 "status" : 200,
 "message" : "Data anak berhasil ditemukan"
-“data” : {
+"data" : {
 "nama" : "kayla pacifica", 
 "tanggal_lahir" : "2030-11-09",
 "umur" : "2",
 "domisili" : "surabaya",
-"keluhan" : "speech,
+"keluhan" : "speech",
 "Rekomendasi" : ["1","2"] //terapi id
 } 
 }
