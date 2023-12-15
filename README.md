@@ -1,12 +1,59 @@
 # REST-API-Documentation
 
-## --- User ---
+## --- Welcome ---
 
 ### GET
 
-### GET by ID
+#### Request
+``` GET http://<IP>/api/ ```
+
+## --- User ---
+
+## Register
 
 ### POST
+
+#### Request
+
+```
+POST {{base_url}}/api/users/register
+Content-Type: application/json
+
+{
+    "username" : "string",
+    "email" : "string",
+    "domicile" :  "string",
+    "birthDate" : "date",
+    "password" :  "string",
+    "confirmPass" : "string"
+}
+```
+
+#### Response Success
+
+```
+{
+  message: "Successfully added data!",
+  status: 201,
+  data: {
+    id: "int",
+    "username" : "string",
+    "email" : "string",
+    "domicile" :  "string",
+    "birthDate" : "date",
+    "password" :  "string",
+    "confirmPass" : "string"
+  }
+}
+```
+
+### Response Fail
+
+```
+{ 
+  error: "Internal Server Error"
+}
+```
 
 ## --- Soal Test ---
 
