@@ -36,7 +36,7 @@ Content-Type: application/json
   message: "Successfully added data!",
   status: 201,
   data: {
-    id: "int",
+    "id" : "int",
     "username" : "string",
     "email" : "string",
     "domicile" :  "string",
