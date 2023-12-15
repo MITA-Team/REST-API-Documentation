@@ -15,7 +15,7 @@
 
 #### Request
 
-```
+```json
 POST {{base_url}}/api/users/register
 Content-Type: application/json
 
@@ -31,7 +31,7 @@ Content-Type: application/json
 
 #### Response Success
 
-```
+```json
 {
   message: "Successfully added data!",
   status: 201,
@@ -49,7 +49,7 @@ Content-Type: application/json
 
 ### Response Fail
 
-```
+```json
 { 
   error: "Internal Server Error"
 }
